@@ -1,0 +1,15 @@
+nav .navlinks {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: rgb(162, 92, 92);
+    margin: 1rem;
+}
