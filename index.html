@@ -16,18 +16,32 @@
         <div class="left">
             <a href="/">Alyssa De Los Santos</a>
         </div>
-        <!-- HAMBURGER MENU BUTTON -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <button style="font-size:24px; background: none; border: none; cursor: pointer;">
-                <i class="fa fa-bars"></i></button>
-        </div>
 
         <div class="right">
-            <a href="">About Me</a>
-            <a href="">Projects</a>
-            <a href="">Skills</a>
-            <a href="">Contact Me</a>
+            <li><a href="">About Me</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Contact Me</a></li>
         </div>
+
+        <!-- HAMBURGER MENU BUTTON -->
+        <div class="hamburger">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <!-- <i class="fa fa-bars"></i></button> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="" onclick="toggleMenu()">About Me</a></li>
+                <li><a href="" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="" onclick="toggleMenu()">Contact Me</a></li>
+            </div>
+            <!-- <button style="font-size:24px; background: none; border: none; cursor: pointer;"> -->
+
+        </div>
+
     </nav>
 
     <main>
