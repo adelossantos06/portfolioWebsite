@@ -36,6 +36,10 @@ nav {
     height: 80px;
 }
 
+.left {
+    width: 100%;
+}
+
 nav .left a {
     color: var(--text-color);
     font-size: 22px;
@@ -48,9 +52,12 @@ nav .right a {
 }
 
 .right {
+    width: 100%;
+    justify-content: flex-end;
     list-style: none;
     display: flex;
     margin-left: 25px;
+
 }
 
 nav .right a {
@@ -62,7 +69,13 @@ nav .right a {
     display: none;
 }
 
-@media (max-width: 685px) {
+.ham-menu-links li {
+    display: none;
+}
+
+
+/* MOBILE CSS */
+@media (max-width: 739px) {
 
     .left {
         /* margin: 30px 20px; */
@@ -125,7 +138,6 @@ nav .right a {
     /* HAM NAV MENU */
 
     .ham-menu-links {
-        display: none;
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
@@ -137,17 +149,24 @@ nav .right a {
         text-decoration: none;
     }
 
-    .ham-menu-links li {
-        background: transparent;
-        list-style-type: none;
-        cursor: pointer;
-    }
-
     .ham-menu-links.active {
-        display: block;
         opacity: 1;
         transform: translateY(0);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 10px 0;
+        z-index: 10;
+    }
 
+    .ham-menu-links.active li {
+        display: block;
+        text-align: center;
+        padding: 10px;
     }
 
 }

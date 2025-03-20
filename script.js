@@ -1,14 +1,24 @@
-const hamBtn = document.querySelector(".ham-btn");
-const navMenu = document.querySelector(".ham-menu-links");
+document.addEventListener("DOMContentLoaded", () => {
 
-hamBtn.addEventListener('click', () => {
-    const isOpened = hamBtn.getAttribute('aria-expanded') === 'true';
+    const hamBtn = document.querySelector(".ham-btn");
+    const navMenu = document.querySelector(".ham-menu-links");
 
-    hamBtn.setAttribute('aria-expanded', isOpened ? 'false' : 'true');
-    navMenu.classList.toggle('active');
+    console.log("it works!")
 
-    if (!hamBtn.hasAttribute('aria-expanded')) {
-        hamBtn.setAttribute('aria-expanded', 'false');
-    }
+    hamBtn.addEventListener('click', () => {
+        console.log("Button clicked!");
+        const isOpened = hamBtn.getAttribute('aria-expanded') === 'true';
+        console.log("Before toggle:", isOpened);
 
-})
+        hamBtn.setAttribute('aria-expanded', isOpened ? 'false' : 'true');
+        navMenu.classList.toggle('active');
+
+        console.log("After toggle:", hamBtn.getAttribute('aria-expanded'));
+
+        if (!hamBtn.hasAttribute('aria-expanded')) {
+            hamBtn.setAttribute('aria-expanded', 'false');
+        }
+
+    })
+});
+
